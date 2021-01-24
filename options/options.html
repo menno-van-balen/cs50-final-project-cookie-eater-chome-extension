@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cookie Eater Options</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <div class="delete-wrapper">
+        <h1>Cookie Eater Options</h1>
+        <h3>ON / OFF</h3>
+        <p>
+          After leaving a webpage or closing a tab, Cookie Eater deletes all
+          cookies, if you choose so.<br />
+          <b>Turn Cookie Eater on of off</b>
+        </p>
+        <div class="delete">
+          <label for="delete">
+            <input
+              type="radio"
+              name="yes-no"
+              id="delete"
+              class="radio-checkbox"
+              value="yes"
+              checked
+            />on
+          </label>
+          <label for="delete">
+            <input
+              type="radio"
+              name="yes-no"
+              id="delete-not"
+              class="radio-checkbox"
+              value="no"
+            />off
+          </label>
+        </div>
+      </div>
+
+      <div class="whitelist-wrapper">
+        <h3>Whitelist Pages</h3>
+        <p>
+          Cookies are usefull, for websites where you login, so they'll remember
+          you next time when you vissit the page. (Think Amazon, Prime,
+          Netflixx, your library, newspaper etc.) To start you can select here
+          some sites to your whitelist.
+        </p>
+        <div class="tip">
+          <p>
+            <b>Tip:</b
+            ><em>
+              If you want to whitelist other domains click on the Cookie Eater
+              icon under extensions when you are on the page you want to
+              whitelist. Here you'll find two self-explanatory buttons. Go ahead
+              try it right now!</em
+            >
+          </p>
+        </div>
+        <p><b>Check the pages you want to whitelist</b></p>
+
+        <label>
+          <input
+            type="checkbox"
+            name="whitelist"
+            class="whitelist"
+            value=".google.com"
+          />Google.com (Don't forget to whitelist your google country too
+          (google.pt for example))<br />
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            name="whitelist"
+            class="whitelist"
+            value=".youtube.com"
+          />YouTube<br />
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            name="whitelist"
+            class="whitelist"
+            value=".facebook.com"
+          />Facebook<br />
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            name="whitelist"
+            class="whitelist"
+            value=".imdb.com"
+          />IMDB<br />
+        </label>
+      </div>
+
+      <div class="only-secure">
+        <h3>Delete Non Secure Cookies From Whitelist</h3>
+        <p>
+          Alternatively you could also only save the secure cookies from domains
+          on your whitelist, the one that stores the important information, and
+          delete the non secure cookies, which might be there for marketing
+          purposes for instance.<br />
+          <b> Check the box if you want this</b>
+        </p>
+        <label>
+          <input
+            type="checkbox"
+            id="save-secure"
+            class="checkbox"
+            value="save"
+          />
+          Delete unsecure and only keep secure cookies
+        </label>
+      </div>
+
+      <div class="button-finder">
+        <h3>Auto Consent For Cookies</h3>
+        <p>
+          If you don't like pushing the button to allow for cookies everytime
+          when you vissit a website, you can try this feature which does it for
+          you.<br />
+          It works in a lot of cases but sometimes not then you have to consent
+          after all, if the site acts strange you'll have to pause Cookie Eater
+          and refresh the page.<br />
+          <b> Check the box if you want this</b>
+        </p>
+        <label>
+          <input type="checkbox" id="button" class="checkbox" value="push" />
+          Push the button for me
+        </label>
+      </div>
+
+      <br />
+      <div class="save-button">
+        <p><b>Click the save button to save the previous options</b></p>
+        <button id="save">Save</button>
+      </div>
+      <div id="status"></div>
+
+      <div id="your-list">
+        <h3>My Whitelist</h3>
+        <p>
+          These are the domains saved in your whitelist (if any):<br />
+          <b>Click <button class="del-button">x</button> to delete an entry</b>
+        </p>
+        <ul id="list"></ul>
+      </div>
+
+      <script src="options.js"></script>
+    </div>
+  </body>
+</html>

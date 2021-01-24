@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Coda&family=Coda+Caption:wght@800&display=swap");
+
+body {
+  background-color: rgb(31, 44, 40);
+}
+
+.page-wrapper,
+.del-button {
+  background-color: burlywood;
+}
+
+.page-wrapper {
+  width: 67%;
+  margin: 0px auto;
+  padding: 0 20px 1px 20px;
+  border-radius: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(31, 44, 40);
+  font-family: "Coda Caption", sans-serif;
+}
+
+input:hover,
+button:hover {
+  cursor: pointer;
+}
+
+#status,
+h3 {
+  color: aliceblue;
+  font-family: "Coda", cursive;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+p {
+  margin-top: 0;
+  font-size: 13px;
+}
+
+.tip {
+  background-color: rgb(238, 213, 181);
+}
+
+button {
+  background-color: lightskyblue;
+  border-radius: 5px;
+}
+
+.del-button {
+  color: red;
+  padding: 0;
+  border: 0;
+  font-family: inherit;
+  font-weight: bold;
+}
+
+.del-button:focus {
+  outline: none;
+}
