@@ -27,7 +27,7 @@ chrome.storage.sync.get(["cookies", "whitelist", "delUnsecure"], (store) => {
   }
   delUnsecure = store.delUnsecure;
 
-  // Load all domains from open tabs in urls or clear urls
+  // Load or clear all domains from open all tabs in the openTabs object
   if (cookies) {
     chrome.tabs.query({}, (tabs) => {
       tabs.forEach((tab) => {
@@ -54,7 +54,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
       chrome.browserAction.setBadgeText({ text: "" });
     }
   } else {
-    // Get domain and add to urls or update urls to new domain
+    // Get domain and add to openTabs or update openTabs to new domain
     if (cookies && tab.status === "complete" && !chromeReg.test(tab.url)) {
       // set prevdomain from urls then get new domain;
       const prevDomain = openTabs[tab.id];
@@ -79,7 +79,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
         deleteCookies(prevDomain, delUnsecure);
       }
 
-      // Update urls object
+      // Update openTabs object
       openTabs[tab.id] = domain;
       // console.log("openTabs:", openTabs);
     }
