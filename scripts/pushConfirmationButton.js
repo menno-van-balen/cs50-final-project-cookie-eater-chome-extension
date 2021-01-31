@@ -79,7 +79,7 @@ function searchButonInchildren(node) {
 
     // Only click the button if it is o.k.
     const attributeRegex = /dismiss|close|cc|consent/i;
-    const okRegex = /\bok\b|\b\s*×\s*\b|\bx\b|\bakkoord\b|\balles\b|\byes\b|\bagree\b|\baccept\b|\bconcordo\b|\baceito\b/i;
+    const okRegex = /\bok\b|\b\s*×\s*\b|\bx\b|\bakkoord\b|\baccepteren\b|\balles\b|\byes\b|\bagree\b|\baccept\b|\bconcordo\b|\baceito\b/i;
 
     if (okRegex.test(innerText) || attributeRegex.test(ariaLabel)) {
       console.log(innerText, " | ", ariaLabel);
